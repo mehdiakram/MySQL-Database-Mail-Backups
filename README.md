@@ -2,9 +2,9 @@
 Backingup your web site’s database is considered a common sense. We all know that, yet we often forget about it. This mini PHP application that creates regular backups of your MySQL database and sends it to configurable email address. The whole process is scheduled with a help of Cron, a Unix program that runs programs at scheduled times.
 
 # Conifgure 
-1. Download from https://github.com/PHPMailer/PHPMailer
+1. Download PHPMailer from https://github.com/PHPMailer/PHPMailer
 2. Upload & rename "PHPMailer" in same directory
-3. Change index.php files db user, password & smtp access
+3. Change index.php file's credentials
 
 # Cron Job:
 ## 0 0 * * * php /home/your_account/mydbbackup/index.php >/dev/null 2>&1

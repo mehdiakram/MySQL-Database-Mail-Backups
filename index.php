@@ -9,40 +9,40 @@ require ("PHPMailer/src/Exception.php");
 
 //Edit below values with your own values.
 $db_server 			= "localhost"; // Usually "localhost"		                                      
-$db_name 			  = "dbname"; // Your database name
-$db_user 			  = "dbuser"; // Your database user name
-$db_pass 			  = "dbpassword"; // Your database user password
-$site_url			  = "https://www.royaltechbd.com"; // Site url
-$email_host     = "smtp.gmail.com"; //email sending domain
-$smtp_username  = "info@royaltechbd.com";
-$smtp_pass      = "emailpassword";
-$from_email 		= "backup@royaltechbd.com";
+$db_name 			= "dbname"; // Your database name
+$db_user 			= "dbuser"; // Your database user name
+$db_pass 			= "dbpassword"; // Your database user password
+$site_url			= "https://www.royaltechbd.com"; // Site url
+$email_host     		= "smtp.gmail.com"; //email sending domain
+$smtp_username  		= "info@royaltechbd.com";
+$smtp_pass      		= "emailpassword";
+$from_email 			= "backup@royaltechbd.com";
 $from_name 			= "Royal Technologies Backup";
 $mail_to1  			= "info@royaltechbd.com"; // To which email db get sent.
-$mail_to1_name  = 'Royal Technologies'; // To whom email get sent
-$mail_to2       = ''; // Optional
-$mail_to2_name  = ''; // Optional
-$save_dir			      = ''; // Will be saved temporary file in same folder where this script is kept. keep empty for same folder where this file is..
-$file_name_prefix	  = 'royaltech_billing_'; //prefix name to your backed up db file.. e.g. prefix_name_2022_06_14_19_31_00.sql.gz
-$time_zone          = "Asia/Dhaka";
-$compression        = true; // true or false. True for sql.gz (small file size of bkup) and false for .sql (bigger file size of bkup)
-$date 				      = date('d_F_Y_H_i_s');
+$mail_to1_name  		= 'Royal Technologies'; // To whom email get sent
+$mail_to2       		= ''; // Optional
+$mail_to2_name  		= ''; // Optional
+$save_dir			= ''; // Will be saved temporary file in same folder where this script is kept. keep empty for same folder where this file is..
+$file_name_prefix	  	= 'royaltech_billing_'; //prefix name to your backed up db file.. e.g. prefix_name_2022_06_14_19_31_00.sql.gz
+$time_zone          		= "Asia/Dhaka";
+$compression        		= true; // true or false. True for sql.gz (small file size of bkup) and false for .sql (bigger file size of bkup)
+$date 				= date('Y_m_d_H_i_s');
 $delete_bkupfile_after_email  	= "Yes"; // Yes or No
 
 /*
 ---- Do NOT EDIT BELOW -----
 */
 $backup_config = array(
-    'DB_HOST'       => $db_server,
-    'DB_NAME'       => $db_name,
-    'DB_USERNAME'   => $db_user,
-    'DB_PASSWORD'   => $db_pass,
-    'INCLUDE_DROP_TABLE' => false,
-    'SAVE_DIR'      => $save_dir	,
-    'SAVE_AS'       => $file_name_prefix,
-    'APPEND_DATE_FORMAT' => 'Y_m_d_H_i_s',
-    'TIMEZONE'      => ''.$time_zone.'',
-    'COMPRESS'      => $compression,
+    'DB_HOST'       		=> $db_server,
+    'DB_NAME'       		=> $db_name,
+    'DB_USERNAME'   		=> $db_user,
+    'DB_PASSWORD'   		=> $db_pass,
+    'INCLUDE_DROP_TABLE' 	=> false,
+    'SAVE_DIR'      		=> $save_dir	,
+    'SAVE_AS'       		=> $file_name_prefix,
+    'APPEND_DATE_FORMAT' 	=> 'Y_m_d_H_i_s',
+    'TIMEZONE'      		=> ''.$time_zone.'',
+    'COMPRESS'      		=> $compression,
 );
 
 $backup_db =  backupDB($backup_config);

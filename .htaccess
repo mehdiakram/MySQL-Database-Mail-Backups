@@ -1,1 +1,2 @@
-# Deny from ALL
+ErrorDocument 403 https://www.royaltechbd.com/
+Order Allow,Deny

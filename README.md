@@ -15,7 +15,7 @@ php /home/your_account/mydbbackup/index.php means that PHP will execute the scri
 Replace “your_account” with your account username, and adjust the interval (the above is everyday at midnight).
 
 # Deny Public Access
-Use following code to .htaccess
+To restected public access use following code to .htaccess
 ```
 ErrorDocument 403 https://www.royaltechbd.com/
 Order Allow,Deny
